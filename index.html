@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="login">
+
+        <h1>
+            Đăng Ký
+        </h1>
+        <div class="group-form">
+            <label for="name">Họ và tên</label>
+            <input type="text" required id="name" oninput="CheckName(), CheckDK()">
+            <span class="trang-thai" id="ttname"></span>
+        </div>
+
+        <div class="group-form">
+            <label for="sdt">Số điện thoại</label>
+            <input type="text" required id="sdt" oninput="CheckSdt(), CheckDK()">
+            <span class="trang-thai" id="ttsdt"></span>
+        </div>
+
+        <div class="group-form">
+            <label for="username">Tên đăng nhập</label>
+            <input type="text" required id="username" oninput="CheckUser(), CheckDK()">
+            <span class="trang-thai" id="ttdn"></span>
+        </div>
+
+        <div class="group-form">
+            <label for="email">Email</label>
+            <input type="email" required id="email" oninput="CheckEmail(), CheckDK()">
+            <span class="trang-thai" id="ttemail"></span>
+        </div>
+
+        <div class="group-form">
+            <label for="password">Mật khẩu</label>
+            <input type="password" required id="password" oninput="CheckMK(), CheckCP()">
+            <span class="trang-thai" id="ttmk"></span>
+        </div>
+
+        <div class="group-form">
+            <label for="ConfirmPassword">Nhập lại mật khẩu</label>
+            <input type="password" required id="CPassword" oninput="CheckCP(), CheckDK()">
+            <span class="trang-thai" id="ttnlmk"></span>
+        </div>
+
+        <div class="group-form">
+            <label for="ShowPass">Hiển thị mật khẩu</label>
+            <input type="checkbox" id="ShowPass" onclick="Showpass()">
+        </div>
+
+        <div class="group-form">
+            <button type="submit" onclick="DangKy()">Đăng Ký</button>
+        </div>
+    </form>
+</body>
+
+</html>
+
+<script src="srcipt.js"></script>
